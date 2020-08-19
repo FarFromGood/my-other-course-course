@@ -1,0 +1,16 @@
+title: my-other-course
+description: 'A course to switch to within another a course, I suppose.'
+template:
+  repo: my-other-course-template
+  name: my-other-course
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
